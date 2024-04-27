@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlotManager : MonoBehaviour
+public class Plot : MonoBehaviour
 {
     private FarmManager farmManager;
     private CropSO crop;
     
     private bool isPlanted = false;
-    public SpriteRenderer plant;    // crop
+    public SpriteRenderer plant;    // 植物本體
     // boxcollider2d
 
     private int currentStage = 0;

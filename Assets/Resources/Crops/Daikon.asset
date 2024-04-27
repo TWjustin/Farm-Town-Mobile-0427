@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64f2a64e77ee94449f8a49acb064338, type: 3}
   m_Name: Daikon
   m_EditorClassIdentifier: 
-  cropName: 
+  cropName: daikon
   plantStagesSprites:
   - {fileID: -501263145, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
   - {fileID: 425222043, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}

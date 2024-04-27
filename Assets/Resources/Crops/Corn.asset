@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64f2a64e77ee94449f8a49acb064338, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
-  cropName: 
+  cropName: corn
   plantStagesSprites:
   - {fileID: -1962350676, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
   - {fileID: -167637025, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}

@@ -3,12 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoreManager : MonoBehaviour
+public class ShopContent : MonoBehaviour   // 附在content上
 {
     public GameObject storeCropItemPrefab;
     private List<CropSO> cropList = new List<CropSO>();
     
     private void Awake()
+    {
+        InitializeUI();
+    }
+
+    private void InitializeUI()
     {
         var loadCrops = Resources.LoadAll<CropSO>("Crops");
 
@@ -20,7 +25,7 @@ public class StoreManager : MonoBehaviour
         
         foreach (var crop in cropList)
         {
-            StoreCropItem newCropItem = Instantiate(storeCropItemPrefab, transform).GetComponent<StoreCropItem>();
+            ShopCropItem newCropItem = Instantiate(storeCropItemPrefab, transform).GetComponent<ShopCropItem>();
             newCropItem.crop = crop;
         }
     }
@@ -30,7 +35,7 @@ public class StoreManager : MonoBehaviour
         return a.price.CompareTo(b.price);
     }
     
-    private int SortByTime(CropSO a, CropSO b)
+    private int SortByTime(CropSO a, CropSO b)  // example
     {
         return a.timeBtwStages.CompareTo(b.timeBtwStages);
     }
