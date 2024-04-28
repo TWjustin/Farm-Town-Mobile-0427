@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
-    private FarmManager farmManager;
     private CropSO crop;
     
     private bool isPlanted = false;
@@ -17,7 +16,6 @@ public class Plot : MonoBehaviour
 
     private void Start()
     {
-        farmManager = FindObjectOfType<FarmManager>();
         plant.gameObject.SetActive(false);
     }
 
@@ -34,9 +32,9 @@ public class Plot : MonoBehaviour
                 Debug.Log("Plant is not ready yet");
             }
         }
-        else if (farmManager.isPlanting)
+        else if (FarmManager.Instance.plantMode)
         {
-            Plant(farmManager.selectedCrop);
+            PutSeed(FarmManager.Instance.selectedCrop);
         }
     }
     
@@ -55,9 +53,19 @@ public class Plot : MonoBehaviour
         }
     }
     
-    private void Plant(CropSO newCrop)
+    private void PutSeed(CropSO newCrop)
     {
-        crop = newCrop;
+        if (crop == null)
+        {
+            crop = newCrop;
+        }
+        
+        // 顯示
+        
+    }
+    
+    public void StartGrow()
+    {
         isPlanted = true;
         currentStage = 0;
         UpdatePlant();

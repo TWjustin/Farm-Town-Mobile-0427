@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShopContent : MonoBehaviour   // 附在content上
 {
-    public GameObject storeCropItemPrefab;
+    public GameObject cropPanelPrefab;
     private List<CropSO> cropList = new List<CropSO>();
     
     private void Awake()
@@ -25,8 +25,8 @@ public class ShopContent : MonoBehaviour   // 附在content上
         
         foreach (var crop in cropList)
         {
-            ShopCropItem newCropItem = Instantiate(storeCropItemPrefab, transform).GetComponent<ShopCropItem>();
-            newCropItem.crop = crop;
+            CropPanel cropPanel = Instantiate(cropPanelPrefab, transform).GetComponent<CropPanel>();
+            cropPanel.crop = crop;
         }
     }
     

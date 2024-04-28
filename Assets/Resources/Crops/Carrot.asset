@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64f2a64e77ee94449f8a49acb064338, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  cropName: carrot
+  itemName: carrot
+  icon: {fileID: -624789523, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
+  price: 10
   plantStagesSprites:
   - {fileID: 131042359, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
   - {fileID: 1541052652, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
   - {fileID: 1446601337, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
   timeBtwStages: 3
-  price: 10
-  icon: {fileID: -624789523, guid: 95020e0016d8f754fb906bc988be3a15, type: 3}
